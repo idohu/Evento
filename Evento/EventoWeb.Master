@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EventoWeb.master.cs" Inherits="Evento.EventoWeb" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/style.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%">
+                <tr>
+                    <td colspan="5" align="center">Evento - Events Manager</td>
+                </tr>
+                <tr>
+                    <td colspan="5" width="100%">
+                        <asp:Menu width="100%" runat="server" Orientation="Horizontal" CssClass="NavigationMenu" StaticDisplayLevels="2"
+                            DynamicHorizontalOffset="1" StaticSubMenuIndent="1px" MaximumDynamicDisplayLevels="4">
+                            <StaticMenuItemStyle ItemSpacing="10"/>
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Events" Value="Events" NavigateUrl="~/Events.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Reports" Value="Reports" NavigateUrl="~/Reports.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle CssClass="staticHoverStyle" />
+                            <StaticSelectedStyle CssClass="staticMenuItemSelectedStyle" />
+                            <DynamicMenuItemStyle CssClass="dynamicMenuItemStyle" />
+                            <DynamicHoverStyle CssClass="menuItemMouseOver" />
+                            <DynamicMenuStyle CssClass="menuItem" />
+                            <DynamicSelectedStyle CssClass="menuItemSelected" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
