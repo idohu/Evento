@@ -73,3 +73,10 @@ text-decoration:none;
 font-family:Verdana;
 font-size:10pt;
 }
+
+.rptr-event {
+    background-color: beige;
+    color: black;
+    border: solid 3px #333333;
+    border-radius: 12px;
+}

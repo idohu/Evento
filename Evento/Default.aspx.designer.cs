@@ -19,7 +19,7 @@ namespace Evento {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptr_UpComing;
+        protected global::Juice.Accordion rptr_UpComing;
         
         /// <summary>
         /// Label4 control.
@@ -31,13 +31,13 @@ namespace Evento {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBox1 control.
+        /// NewEventNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox NewEventNameTextBox;
         
         /// <summary>
         /// Label3 control.
@@ -49,13 +49,13 @@ namespace Evento {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox2 control.
+        /// NewEventLocationTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox NewEventLocationTextBox;
         
         /// <summary>
         /// Label2 control.
@@ -67,6 +67,24 @@ namespace Evento {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
+        /// _Restrict control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox _Restrict;
+        
+        /// <summary>
+        /// Datepicker1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Juice.Datepicker Datepicker1;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -76,22 +94,22 @@ namespace Evento {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ddlStartTimeHr control.
+        /// NewEventHourDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStartTimeHr;
+        protected global::System.Web.UI.WebControls.DropDownList NewEventHourDDL;
         
         /// <summary>
-        /// ddlStartTimeMin control.
+        /// NewEventMinuteDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStartTimeMin;
+        protected global::System.Web.UI.WebControls.DropDownList NewEventMinuteDDL;
         
         /// <summary>
         /// rptr_Previous control.

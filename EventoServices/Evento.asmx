@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="Evento.asmx.cs" Class="EventoServices.Service1" %>

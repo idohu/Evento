@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EventoDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="EventoDBModelStoreContainer">
+          <EntitySet Name="Events" EntityType="EventoDBModel.Store.Events" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Managers" EntityType="EventoDBModel.Store.Managers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pictures" EntityType="EventoDBModel.Store.Pictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="EventoDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Events_ToManagers" Association="EventoDBModel.Store.FK_Events_ToManagers">
+            <End Role="Managers" EntitySet="Managers" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_ToEvents" Association="EventoDBModel.Store.FK_Pictures_ToEvents">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_ToUsers" Association="EventoDBModel.Store.FK_Pictures_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EventName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="Artist" Type="nvarchar" MaxLength="50" />
+          <Property Name="TicketsAvialable" Type="int" Nullable="false" />
+          <Property Name="TicketsSold" Type="int" Nullable="false" />
+          <Property Name="EventManager" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EventImage" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Managers">
+          <Key>
+            <PropertyRef Name="ManagerName" />
+          </Key>
+          <Property Name="ManagerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Organization" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pictures">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="PictureName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="E-mail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Events_ToManagers">
+          <End Role="Managers" Type="EventoDBModel.Store.Managers" Multiplicity="1" />
+          <End Role="Events" Type="EventoDBModel.Store.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Managers">
+              <PropertyRef Name="ManagerName" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="EventManager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pictures_ToEvents">
+          <End Role="Events" Type="EventoDBModel.Store.Events" Multiplicity="1" />
+          <End Role="Pictures" Type="EventoDBModel.Store.Pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pictures_ToUsers">
+          <End Role="Users" Type="EventoDBModel.Store.Users" Multiplicity="0..1" />
+          <End Role="Pictures" Type="EventoDBModel.Store.Pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserName" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EventoDBModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="EventoDBEntities">
+          <EntitySet Name="Events" EntityType="EventoDBModel.Event" />
+          <EntitySet Name="Managers" EntityType="EventoDBModel.Manager" />
+          <EntitySet Name="Pictures" EntityType="EventoDBModel.Picture" />
+          <EntitySet Name="Users" EntityType="EventoDBModel.User" />
+          <AssociationSet Name="FK_Events_ToManagers" Association="EventoDBModel.FK_Events_ToManagers">
+            <End Role="Managers" EntitySet="Managers" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_ToEvents" Association="EventoDBModel.FK_Pictures_ToEvents">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_ToUsers" Association="EventoDBModel.FK_Pictures_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EventName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Artist" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TicketsAvialable" Type="Int32" Nullable="false" />
+          <Property Name="TicketsSold" Type="Int32" Nullable="false" />
+          <Property Name="EventImage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Manager" Relationship="EventoDBModel.FK_Events_ToManagers" FromRole="Events" ToRole="Managers" />
+          <NavigationProperty Name="Pictures" Relationship="EventoDBModel.FK_Pictures_ToEvents" FromRole="Events" ToRole="Pictures" />
+        </EntityType>
+        <EntityType Name="Manager">
+          <Key>
+            <PropertyRef Name="ManagerName" />
+          </Key>
+          <Property Name="ManagerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Organization" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Events" Relationship="EventoDBModel.FK_Events_ToManagers" FromRole="Managers" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="PictureName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Event" Relationship="EventoDBModel.FK_Pictures_ToEvents" FromRole="Pictures" ToRole="Events" />
+          <NavigationProperty Name="User" Relationship="EventoDBModel.FK_Pictures_ToUsers" FromRole="Pictures" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="E_mail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Pictures" Relationship="EventoDBModel.FK_Pictures_ToUsers" FromRole="Users" ToRole="Pictures" />
+        </EntityType>
+        <Association Name="FK_Events_ToManagers">
+          <End Role="Managers" Type="EventoDBModel.Manager" Multiplicity="1" />
+          <End Role="Events" Type="EventoDBModel.Event" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Pictures_ToEvents">
+          <End Role="Events" Type="EventoDBModel.Event" Multiplicity="1" />
+          <End Role="Pictures" Type="EventoDBModel.Picture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pictures_ToUsers">
+          <End Role="Users" Type="EventoDBModel.User" Multiplicity="0..1" />
+          <End Role="Pictures" Type="EventoDBModel.Picture" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="EventoDBModelStoreContainer" CdmEntityContainer="EventoDBEntities">
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="EventoDBModel.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Artist" ColumnName="Artist" />
+                <ScalarProperty Name="TicketsAvialable" ColumnName="TicketsAvialable" />
+                <ScalarProperty Name="TicketsSold" ColumnName="TicketsSold" />
+                <ScalarProperty Name="EventImage" ColumnName="EventImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Managers">
+            <EntityTypeMapping TypeName="EventoDBModel.Manager">
+              <MappingFragment StoreEntitySet="Managers">
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Organization" ColumnName="Organization" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="EventoDBModel.Picture">
+              <MappingFragment StoreEntitySet="Pictures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="PictureName" ColumnName="PictureName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="EventoDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_Events_ToManagers" TypeName="EventoDBModel.FK_Events_ToManagers" StoreEntitySet="Events">
+            <EndProperty Name="Managers">
+              <ScalarProperty Name="ManagerName" ColumnName="EventManager" />
+            </EndProperty>
+            <EndProperty Name="Events">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Pictures_ToEvents" TypeName="EventoDBModel.FK_Pictures_ToEvents" StoreEntitySet="Pictures">
+            <EndProperty Name="Events">
+              <ScalarProperty Name="Id" ColumnName="EventID" />
+            </EndProperty>
+            <EndProperty Name="Pictures">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+              <ScalarProperty Name="EventID" ColumnName="EventID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Pictures_ToUsers" TypeName="EventoDBModel.FK_Pictures_ToUsers" StoreEntitySet="Pictures">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="UserName" ColumnName="UserID" />
+            </EndProperty>
+            <EndProperty Name="Pictures">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+              <ScalarProperty Name="EventID" ColumnName="EventID" />
+            </EndProperty>
+            <Condition ColumnName="UserID" IsNull="false" />
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
