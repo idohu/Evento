@@ -1663,6 +1663,7 @@ ul.social_icons li  a i{
   list-style: none outside none;
   margin: 0 0 40px 0;
   padding: 0;
+  
 }
 
 .portfolio-filter > li {
@@ -2639,8 +2640,40 @@ shortcodes page css
   margin-left: 15px;
 }
 
+/*==============================================
+   SING UP PAGE  STYLES    
+ =============================================*/
+.signup-wrapper {
+    padding-top: 60px;
+}
 
+    .signup-wrapper .form-control {
+        max-width: 300px;
+    }
 
+    .signup-wrapper .btn {
+        margin-bottom: 5px;
+    }
+    .signup-wrapper label {
+        font-weight:normal;
+        padding-top:10px;
+    }
+/* SOCIAL BUTTONS */
+.btn-social {
+    color: white;
+    opacity: 0.8;
+}
 
+    .btn-social:hover {
+        color: white;
+        opacity: 1;
+        text-decoration: none;
+    }
 
+.btn-facebook {
+    background-color: #3b5998;
+}
 
+.btn-google {
+    background-color: #c32f10;
+}

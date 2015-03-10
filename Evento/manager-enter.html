@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manager | Evento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number">
+                            <p><i class="fa fa-phone-square"></i>+0123 456 70 90</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                        <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li class="active"><a href="manager-home.html">Managers</a></li>
+                        <li><a href="user-home.html">Users</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+
+    </header>
+    <!--/header-->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="signup-wrapper">
+
+
+                    <div class="col-md-6 col-sm-6">
+                        <strong>Already Registered ? </strong>Please login below to access your account.
+                    <hr />
+
+                        <label>Enter UserName : </label>
+                        <input type="text" id="user" class="form-control">
+                        <label>Enter Password :  </label>
+                        <input type="password" id="pass" class="form-control">
+                        <hr>
+                        <a href="#" onclick="checkLogin()" class="btn btn-info"><span class="fa fa-user"></span>&nbsp;Log In </a>
+                        <label>
+                            <input type="checkbox" name="remember_me" id="remember_me">
+                            Remember me on this computer
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-sm-6 alert alert-info">
+                        <strong>Not Registered </strong>with us ? Fill the form below to get full access.
+                 <hr />
+
+                        <label>Enter User Name</label>
+                        <input type="text" id="username" required class="form-control">
+                        <label>Enter Email</label>
+                        <input type="email" id="email" required class="form-control" data-validation-matches-match="email"
+                            data-validation-matches-message="Must match email address entered above">
+                        <label>Enter Password </label>
+                        <input type="password" required id="pass1" class="form-control">
+                        <label>Re-Enter Password </label>
+                        <input type="password" required id="pass2" class="form-control">
+                        <label>Enter Your Organization </label>
+                        <input type="text" required id="organization" class="form-control">
+                        <label>Enter Phone Number</label>
+                        <input type="text" required id="phone" class="form-control">
+                        <label>Enter Mailing Address </label>
+                        <input type="text" required id="address" class="form-control">
+                        <hr />
+                        <div class="jumbotron" style="background-color: lightblue;">
+                            <label>Enter Bank number </label>
+                            <input type="text" id="bank" class="form-control">
+                            <label>Enter Branch number </label>
+                            <input type="text" id="branch" class="form-control">
+                            <label>Enter Account Number </label>
+                            <input type="text" id="accountNumber" class="form-control">
+                            <label>Enter Account Name </label>
+                            <input type="text" id="accountName" class="form-control">
+                        </div>
+                        <hr>
+                        <button onclick="registerNewUser()" class="btn btn-warning"><span class="fa fa-user-plus"></span>&nbsp;Register Me </button>&nbsp;
+                    </div>
+                </div>
+                <!-- END SIGN UP FORM-->
+            </div>
+
+        </div>
+    </section>
+    <!--/#portfolio-item-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+               
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+        $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); });
+        var user = getCookie("EventoManagerUsername");
+        var pass = getCookie("EventoManagerPassword");
+        if (user != "") {
+            window.location.href = "manager-home.html";
+        }
+    </script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript">
+        function checkLogin() {
+            var pass = document.getElementById("pass").value;
+            var user = document.getElementById("user").value;
+            if (pass.length >= 6 && user.length > 2) {
+                var url = "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/AuthenticateManager";
+                var info = "{\"managerName\":\"" + user + "\",\"password\":\"" + pass + "\"}";
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: info,
+                    crossDomain: true,
+                    contentType: "application/json; charset=UTF-8",
+                    accepts: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (data, textStatus, jqXHR) {
+                        if (document.getElementById("remember_me").checked) {
+                            setCookie("EventoManagerUsername", user, 365);
+                            setCookie("EventoManagerPassword", pass, 365);
+                        }
+                        window.location.href = "manager-home.html";
+                    },
+                    error: function (jq, textStatus, errorThrown) {
+                        alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                    }
+                });
+            } else {
+                alert("something went wrong!");
+            }
+
+        };
+    </script>
+    <<script type="text/javascript">
+         var error = "";
+         function registerNewUser() {
+             if (validate()) {
+                 var url = "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/RegisterManager";
+                 var info = "{\"managerName\":\"" + document.getElementById("username").value +
+                     "\",\"password\":\"" + document.getElementById("pass1").value +
+                     "\",\"organization\":\"" + document.getElementById("organization").value +
+                     "\",\"mainPhone\":\"" + document.getElementById("phone").value +
+                     "\",\"cellPhone\":\"" + document.getElementById("phone").value +
+                     "\",\"eMail\":\"" + document.getElementById("email").value +
+                     "\",\"mailingAddress\":\"" + document.getElementById("address").value +
+                     "\"}";
+                 $.ajax({
+                     type: "POST",
+                     url: url,
+                     data: info,
+                     crossDomain: true,
+                     contentType: "application/json; charset=UTF-8",
+                     accepts: "application/json",
+                     dataType: "json",
+                     async: false,
+                     success: function (data, textStatus, jqXHR) {
+                         if (data.d == true) {
+                             setCookie("EventoManagerUsername", document.getElementById("username").value, 365);
+                             setCookie("EventoManagerPassword", document.getElementById("pass1").value, 365);
+                             window.location.href = "manager-home.html";
+                         }
+                         
+                     },
+                     error: function (jq, textStatus, errorThrown) {
+                         alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                     }
+                 });
+             }
+         }
+         function validate() {
+             if (form.username.value == "") {
+                 return false;
+             }
+             return true;
+         }
+         function checkForm(user, pass1, pass2, email, organ, phone, address, bank, branch, accountNumber, accountName) {
+             if (form.username.value == "") {
+                 alert("Error: Username cannot be blank!");
+                 form.username.focus();
+                 return false;
+             }
+             var re = /^\w+$/;
+             if (!re.test(form.username.value)) {
+                 alert("Error: Username must contain only letters, numbers and underscores!");
+                 form.username.focus();
+                 return false;
+             }
+
+             if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+                 if (form.pwd1.value.length < 6) {
+                     alert("Error: Password must contain at least six characters!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 if (form.pwd1.value == form.username.value) {
+                     alert("Error: Password must be different from Username!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[0-9]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one number (0-9)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[a-z]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one lowercase letter (a-z)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[A-Z]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+             } else {
+                 alert("Error: Please check that you've entered and confirmed your password!");
+                 form.pwd1.focus();
+                 return false;
+             }
+
+             alert("You entered a valid password: ");
+             return true;
+         }
+
+    </script>
+</body>
+</html>

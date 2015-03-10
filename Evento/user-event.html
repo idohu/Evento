@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manager | Evento</title>
+
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
+
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number">
+                            <p><i class="fa fa-phone-square"></i>+0123 456 70 90</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                        <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav" id="navbarPlace">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="manager-home.html">Managers</a></li>
+                        <li class="active"><a href="user-home.html">Users</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+
+    </header>
+    <!--/header-->
+    <section id="feature" class="transparent-bg">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2><label id="eventTitle"></label></h2>
+                <p class="lead">
+                    <label id="eventDescription"></label>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="skill" id="info">
+                        <h2>Information</h2>
+                        <p></p>
+                        <p>Time: <label id="eventTime"></label></p>
+                        <p>
+                            Location:<label id="eventLocation"></label>
+                        </p>
+                        <div id="mapPlacer" style="width: 500px; height: 380px;">
+						</div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="testimonial">
+                        <h2>What People Are Saying</h2>
+                        <div class="media testimonial-inner">
+                            <div class="pull-left">
+                                <img class="img-responsive img-circle" src="images/testimonials2.png" width="66" height="66">
+                            </div>
+                            <div class="media-body">
+                                <p>Your'e awsome!!!! Ido is the BEST!!!</p>
+                                <span><strong>-Noa Roy/</strong> Co-Founder</span>
+                            </div>
+                        </div>
+
+                        <div class="media testimonial-inner">
+                            <div class="pull-left">
+                                <img class="img-responsive img-circle" src="images/testimonials1.png">
+                            </div>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                                <span><strong>-John Doe/</strong> Director of corlate.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 800px; height: 456px; background: #191919; overflow: hidden;">
+                <!-- Loading Screen -->
+                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                    </div>
+                </div>
+
+                <!-- Slides Container -->
+                <div id="images" u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
+                    <div>
+                        <img u="image" src="Images/team-member.jpg" />
+                        <img u="thumb" src="Images/team-member.jpg" />
+                    </div>
+                    <div>
+                        <img u="image" src="Images/team-member.jpg" />
+                        <img u="thumb" src="Images/team-member.jpg" />
+                    </div>
+                   
+                </div>
+
+                <!-- Arrow Navigator Skin Begin -->
+                <style>
+                    /* jssor slider arrow navigator skin 05 css */
+                    /*
+            .jssora05l              (normal)
+            .jssora05r              (normal)
+            .jssora05l:hover        (normal mouseover)
+            .jssora05r:hover        (normal mouseover)
+            .jssora05ldn            (mousedown)
+            .jssora05rdn            (mousedown)
+            */
+                    .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
+                        position: absolute;
+                        cursor: pointer;
+                        display: block;
+                        background: url(../img/a17.png) no-repeat;
+                        overflow: hidden;
+                    }
+
+                    .jssora05l {
+                        background-position: -10px -40px;
+                    }
+
+                    .jssora05r {
+                        background-position: -70px -40px;
+                    }
+
+                    .jssora05l:hover {
+                        background-position: -130px -40px;
+                    }
+
+                    .jssora05r:hover {
+                        background-position: -190px -40px;
+                    }
+
+                    .jssora05ldn {
+                        background-position: -250px -40px;
+                    }
+
+                    .jssora05rdn {
+                        background-position: -310px -40px;
+                    }
+                </style>
+                <!-- Arrow Left -->
+                <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 158px; left: 8px;"></span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 158px; right: 8px"></span>
+                <!-- Arrow Navigator Skin End -->
+
+                <!-- Thumbnail Navigator Skin Begin -->
+                <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 800px; height: 100px; left: 0px; bottom: 0px;">
+                    <!-- Thumbnail Item Skin Begin -->
+                    <style>
+                        /* jssor slider thumbnail navigator skin 01 css */
+                        /*
+                .jssort01 .p           (normal)
+                .jssort01 .p:hover     (normal mouseover)
+                .jssort01 .pav           (active)
+                .jssort01 .pav:hover     (active mouseover)
+                .jssort01 .pdn           (mousedown)
+                */
+                        .jssort01 .w {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .jssort01 .c {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 68px;
+                            height: 68px;
+                            border: #000 2px solid;
+                        }
+
+                        .jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+                            background: url(../img/t01.png) center center;
+                            border-width: 0px;
+                            top: 2px;
+                            left: 2px;
+                            width: 68px;
+                            height: 68px;
+                        }
+
+                        .jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+                            top: 0px;
+                            left: 0px;
+                            width: 70px;
+                            height: 70px;
+                            border: #fff 1px solid;
+                        }
+                    </style>
+                    <div u="slides" style="cursor: move;">
+                        <div u="prototype" class="p" style="position: absolute; width: 72px; height: 72px; top: 0; left: 0;">
+                            <div class="w">
+                                <div u="thumbnailtemplate" style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></div>
+                            </div>
+                            <div class="c">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thumbnail Item Skin End -->
+                </div>
+                <!-- Thumbnail Navigator Skin End -->
+            </div>
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/#feature-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+               
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+	    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+            var user = getCookie("EventoManagerUsername");
+            var pass = getCookie("EventoManagerPassword");
+            if (user == "") {
+                window.location.href = "manager-enter.html";
+            }
+			else{
+			var x = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'+user+'<i class="fa fa-angle-down"></i></a>'+
+                            '<ul class="dropdown-menu"><li><a href="#">Profile</a></li><li><a onclick="SignOut()">Sign Out</a></li></ul></li>';
+			document.getElementById("navbarPlace").innerHTML += x;
+			}
+    </script>
+    <script type="text/javascript">
+        var eventId = window.location.search.substring(9);
+		var l;
+        $.ajax({
+            type: "POST",
+            url: "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/GetEventDetails",
+            data: "{\"eventId\":\"" + parseInt(eventId) + "\"}",
+            crossDomain: true,
+            contentType: "application/json; charset=UTF-8",
+            accepts: "application/json",
+            dataType: "json",
+            async: false,
+            success: function (data, textStatus, jqXHR) {
+                var details = JSON.parse(data.d);
+                document.getElementById("eventTitle").innerHTML = details.EventName;
+                document.getElementById("eventDescription").innerHTML = details.Description;
+				var d = new Date(details.Time).toString();
+				document.getElementById("eventTime").innerHTML = d.substring(0,d.indexOf("G"));
+                l = details.Location;
+                $.ajax({//Add Ticket types
+                    type: "POST",
+                    url: "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/GetTicketsForEvent",
+                    data: "{\"eventId\":\"" + parseInt(eventId) + "\"}",
+                    crossDomain: true,
+                    contentType: "application/json; charset=UTF-8",
+                    accepts: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (data, textStatus, jqXHR) {
+                        var types = JSON.parse(data.d);
+						                            var x = "<table><tr><td>Ticket Type</td><td>Price</td><td>Amount</td></tr>";
+
+                        types.forEach(function (entry) {
+                            var type = entry.TicketType + "(" + entry.TicketPrice + "&#8362;)";
+                            var sold = parseInt(entry.Sold);
+                            var aviala = parseInt(entry.AvialableAmount);
+                            if (entry.Sold != entry.AvialbleAmount) {
+                                x += "<tr><td>" + entry.TicketType + "</td><td>" + entry.TicketPrice + "</td><td><input type=\"number\" id=\"" + entry.TicketType
+                                    + "\" min=\"0\" max=\"" + entry.AvialableAmount + "\">" + "</td></tr>";
+                            }
+                        });
+                            document.getElementById("info").innerHTML += x + "</table>";
+
+                    },
+                    error: function (jq, textStatus, errorThrown) {
+                        alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                    }
+                });
+                $.ajax({//Set Images
+                    type: "POST",
+                    url: "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/GetPhotosForEvent",
+                    data: "{\"eventId\":\"" + parseInt(eventId) + "\"}",
+                    crossDomain: true,
+                    contentType: "application/json; charset=UTF-8",
+                    accepts: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (data, textStatus, jqXHR) {
+                        var photos = JSON.parse(data.d);
+                        photos.forEach(function (entry) {
+                            var x = "<div><img u=\"image\" src=\"Images/Events/" + entry.PictureName + "\" /><img u=\"thumb\" src=\"Images/Events/" + entry.PictureName + "\" /></div>";
+                                document.getElementById("images").innerHTML += x;
+                        });
+                    },
+                    error: function (jq, textStatus, errorThrown) {
+                        alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                    }
+                });
+            },
+            error: function (jq, textStatus, errorThrown) {
+                alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+            }
+        });
+$(document).ready(function () {
+            GetAddress(l);
+
+        });
+        function GetAddress(position) {
+            var myLatlng = new google.maps.LatLng(position.substring(1, position.indexOf(",")), position.substring(position.indexOf(",")+1,position.length-1));
+            var mapOptions = {
+                zoom: 15,
+                center: myLatlng,
+				draggable: false
+            }
+            var map = new google.maps.Map(document.getElementById("mapPlacer"), mapOptions);
+
+            // Place a draggable marker on the map
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+            });
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'latLng': marker.position }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        document.getElementById("eventLocation").innerHTML = results[0].formatted_address;
+                    }
+                }
+            });
+            google.maps.event.addListener(marker, 'dragend', function (evt) {
+                geocoder.geocode({ 'latLng': marker.position }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[0]) {
+                            document.getElementById("eventLocation").innerHTML = results[0].formatted_address;
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+
+            var _SlideshowTransitions = [
+            //Fade in L
+                { $Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out R
+                , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in R
+                , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out L
+                , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in T
+                , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out B
+                , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in B
+                , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out T
+                , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR Chess
+                , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR Chess
+                , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in TB Chess
+                , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out TB Chess
+                , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+
+            //Fade Clip in H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip in V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 800,                                //Specifies default duration (swipe) for slide in milliseconds
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                },
+
+                $ThumbnailNavigatorOptions: {                       //[Optional] Options to specify and enable thumbnail navigator or not
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 10,                             //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 360                          //[Optional] The offset position to park thumbnail
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth, 800), 300));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+		function SignOut(){
+			deleteCookie("EventoManagerUsername");
+			deleteCookie("EventoManagerPassword");
+			window.location.href = "index.html";
+		}
+    </script>
+</body>
+</html>

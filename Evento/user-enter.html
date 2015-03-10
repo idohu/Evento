@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>User | Evento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number">
+                            <p><i class="fa fa-phone-square"></i>+0123 456 70 90</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                        <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="manager-home.html">Managers</a></li>
+                        <li class="active"><a href="user-home.html">Users</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+
+    </header>
+    <!--/header-->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="signup-wrapper">
+
+
+                    <div class="col-md-6 col-sm-6">
+                        <strong>Already Registered ? </strong>Please login below to access your account.
+                    <hr />
+                        <a href="#" class="btn btn-social btn-facebook">
+                            <i class="fa fa-facebook"></i>&nbsp; Facebook Account</a>
+                        &nbsp;OR&nbsp;
+                    <a href="#" class="btn btn-social btn-google">
+                        <i class="fa fa-google-plus"></i>&nbsp; Google Account</a>
+                        <hr>
+                        <h5>Or Login with <strong>Website Account  :</strong></h5>
+                        <label>Enter UserName : </label>
+                        <input type="text" id="user" class="form-control">
+                        <label>Enter Password :  </label>
+                        <input type="password" id="pass" class="form-control">
+                        <hr>
+                        <a href="#" onclick="checkLogin()" class="btn btn-info"><span class="fa fa-user"></span>&nbsp;Log In </a>
+                        <label>
+                                        <input type="checkbox" name="remember_me" id="remember_me">
+                                        Remember me on this computer
+                                    </label>
+                    </div>
+                    <div class="col-md-6 col-sm-6 alert alert-info">
+                        <strong>Not Registered </strong>with us ? Login with facebook / Google or fill the form below to get full access.
+                 <hr />
+
+                        <label>Enter User Name</label>
+                        <input type="text" id="username" class="form-control">
+                        <label>Enter Email</label>
+                        <input type="text" id="email" class="form-control">
+                        <label>Enter Password </label>
+                        <input type="password" id="pass1" class="form-control">
+                        <label>Re-Enter Password </label>
+                        <input type="password" id="pass2" class="form-control">
+                        <label>Enter First Name </label>
+                        <input type="text" id="fName" class="form-control">
+                        <label>Enter Last Name</label>
+                        <input type="text" id="lName" class="form-control">
+                        <label>Enter Date Of Birth </label>
+                        <input type="date" id="birthDate" class="form-control">
+                        <hr />
+                            <div class="jumbotron" style="background-color: lightblue;">
+								Enter PayPal Information (optional):
+								<div>
+								<label>Enter Email</label>
+                        <input type="text" id="ppemail" class="form-control">
+                        <label>Enter Password </label>
+                        <input type="password" id="pppass1" class="form-control">
+								</div>
+                            </div>
+                            <div class="jumbotron" style="background-color: lightblue;">
+              <div class="credit-card-div">
+			  Enter Credit Card Data (optional):
+<div class="panel panel-default" >
+ <div class="panel-heading">
+     
+      <div class="row ">
+              <div class="col-md-12">
+                  <input type="text" id="cardNum" class="form-control" placeholder="Enter Card Number" />
+              </div>
+          </div>
+     <div class="row ">
+              <div class="col-md-3 col-sm-3 col-xs-3">
+                  <span class="help-block text-muted small-font" > Expiry Month</span>
+                  <input type="text" id="cardMonth" class="form-control" placeholder="MM" />
+              </div>
+         <div class="col-md-3 col-sm-3 col-xs-3">
+                  <span class="help-block text-muted small-font" >  Expiry Year</span>
+                  <input type="text" id="cardYear" class="form-control" placeholder="YY" />
+              </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+                  <span class="help-block text-muted small-font" >  CCV</span>
+                  <input type="text" id="cardCCV" class="form-control" placeholder="CCV" />
+              </div>
+         <div class="col-md-3 col-sm-3 col-xs-3">
+<img src="assets/img/1.png" class="img-rounded" />
+         </div>
+          </div>
+     <div class="row ">
+              <div class="col-md-12 pad-adjust">
+
+                  <input type="text" id="cardName" class="form-control" placeholder="Name On The Card" />
+              </div>
+          </div>
+    
+                   </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="#" onclick="registerNewUser()" class="btn btn-warning"><span class="fa fa-user-plus"></span>&nbsp;Register Me </a>&nbsp;
+                    </div>
+                </div>
+                <!-- END SIGN UP FORM-->
+            </div>
+
+    </section>
+    <!--/#portfolio-item-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+               
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+        $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); });
+        var user = getCookie("EventoUsername");
+        var pass = getCookie("EventoPassword");
+        if (user != "") {
+            window.location.href = "manager-home.html";
+        }
+    </script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript">
+        function checkLogin() {
+            var pass = document.getElementById("pass").value;
+            var user = document.getElementById("user").value;
+            if (pass.length >= 6 && user.length > 2) {
+                var url = "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/AuthenticateUser";
+                var info = "{\"userName\":\"" + user + "\",\"password\":\"" + pass + "\"}";
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: info,
+                    crossDomain: true,
+                    contentType: "application/json; charset=UTF-8",
+                    accepts: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (data, textStatus, jqXHR) {
+                        if (document.getElementById("remember_me").checked) {
+                            setCookie("EventoUsername", user, 365);
+                            setCookie("EventoPassword", pass, 365);
+                        }
+						else{
+						setCookie("EventoUsername", user, 1);
+                            setCookie("EventoPassword", pass, 1);
+						}
+						
+                        window.location.href = "user-home.html";
+                    },
+                    error: function (jq, textStatus, errorThrown) {
+                        alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                    }
+                });
+            } else {
+                alert("something went wrong!");
+            }
+
+        };
+    </script>
+    <<script type="text/javascript">
+         var error = "";
+         function registerNewUser() {
+             if (validate()) {
+                 var url = "http://hdm.ise.bgu.ac.il/EventoServices/Evento.asmx/RegisterUser";
+				 var payment="";
+						if (document.getElementById("ppuser").value!="" &&document.getElementById("pppass1").value!=""){
+						payment = "PP%"+document.getElementById("ppuser").value+"%"+document.getElementById("pppass1").value;
+						}
+						if (document.getElementById("cardNum").value!="" && document.getElementById("cardName").value !=""
+						&& document.getElementById("cardMonth").value!="" && document.getElementById("cardYear").value!="" &&
+						document.getElementById("cardCCV").value!=""){
+						payment = "CC%"+document.getElementById("cardNum").value+"%"+
+						document.getElementById("cardName").value+"%"+
+						document.getElementById("cardMonth").value+"%"+
+						document.getElementById("cardYear").value+"%"+
+						document.getElementById("cardCCV").value;
+						}
+                 var info = "{\"userName\":\"" + document.getElementById("username").value +
+                     "\",\"password\":\"" + document.getElementById("pass1").value +
+                     "\",\"firstName\":\"" + document.getElementById("fName").value +
+                     "\",\"lastName\":\"" + document.getElementById("lName").value +
+                     "\",\"birthDate\":\"" + document.getElementById("birthDate").value +
+                     "\",\"eMail\":\"" + document.getElementById("email").value +
+					 "\",\"payment\":\"" + payment +
+                     "\"}";
+                 $.ajax({
+                     type: "POST",
+                     url: url,
+                     data: info,
+                     crossDomain: true,
+                     contentType: "application/json; charset=UTF-8",
+                     accepts: "application/json",
+                     dataType: "json",
+                     async: false,
+                     success: function (data, textStatus, jqXHR) {
+                         if (data.d == true) {
+                             setCookie("EventoUsername", document.getElementById("username").value, 365);
+                             setCookie("EventoPassword", document.getElementById("pass1").value, 365);
+                             window.location.href = "user-home.html";
+                         }
+						else{
+							alert("Username or Password incorrect!");
+						}
+                     },
+                     error: function (jq, textStatus, errorThrown) {
+                         alert(' errors : ' + errorThrown + ' ' + textStatus + ' ' + jq.responseText + ' ' + jq.statusText);
+                     }
+                 });
+             }
+         }
+         function validate() {
+             if (document.getElementById("username").value.length<3) {
+				alert("Error: Username must be longer then 3 characters");
+                document.getElementById("username").focus();
+                return false;
+             }
+			  if (document.getElementById("username").value == "") {
+				alert("Error: Username cannot be blank!");
+                document.getElementById("username").focus();
+                return false;
+				}
+             if (document.getElementById("pass1").value.length < 6) {
+                     alert("Error: Password must contain at least six characters!");
+                     document.getElementById("pass1").focus();
+                     return false;
+                 }
+                 if (document.getElementById("pass1").value == document.getElementById("username").value) {
+                     alert("Error: Password must be different from Username!");
+                     document.getElementById("pass1").focus();
+                     return false;
+                 }
+                 re = /[0-9]/;
+                 if (!re.test(document.getElementById("pass1").value)) {
+                     alert("Error: password must contain at least one number (0-9)!");
+                     document.getElementById("pass1").focus();
+                     return false;
+                 }
+                 re = /[a-zA-Z]/;
+                 if (!re.test(document.getElementById("pass1").value)) {
+                     alert("Error: password must contain at least one letter!");
+                     document.getElementById("pass1").focus();
+                     return false;
+                 }
+				 if (document.getElementById("pass1").value != document.getElementById("pass2").value){
+					 alert("Error: Passwords don't match!");
+                     document.getElementById("pass1").focus();
+                     return false;
+				 }
+				 if (document.getElementById("email").value == ""){
+					 alert("Error: Must Specify Email!");
+                     document.getElementById("email").focus();
+                     return false;
+				 }
+				 re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
+				 if (!re.test(document.getElementById("email").value)){
+					 alert("Error: Not a valid Email address!");
+                     document.getElementById("email").focus();
+                     return false;
+				 }
+				 var selectedDate = new Date(document.getElementById("birthDate").value);
+				 var now = new Date();
+				 if (selectedDate > now) {
+					 alert("Error: Date of birth must be in the past!");
+                     document.getElementById("birthDate").focus();
+                     return false;
+				 }
+             return true;
+         }
+         function checkForm() {
+             if (form.username.value == "") {
+                 alert("Error: Username cannot be blank!");
+                 form.username.focus();
+                 return false;
+             }
+             var re = /^\w+$/;
+             if (!re.test(form.username.value)) {
+                 alert("Error: Username must contain only letters, numbers and underscores!");
+                 form.username.focus();
+                 return false;
+             }
+
+             if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+                 if (form.pwd1.value.length < 6) {
+                     alert("Error: Password must contain at least six characters!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 if (form.pwd1.value == form.username.value) {
+                     alert("Error: Password must be different from Username!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[0-9]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one number (0-9)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[a-z]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one lowercase letter (a-z)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+                 re = /[A-Z]/;
+                 if (!re.test(form.pwd1.value)) {
+                     alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                     form.pwd1.focus();
+                     return false;
+                 }
+             } else {
+                 alert("Error: Please check that you've entered and confirmed your password!");
+                 form.pwd1.focus();
+                 return false;
+             }
+
+             alert("You entered a valid password: ");
+             return true;
+         }
+
+    </script>
+</body>
+</html>
